@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="menu-bg"></div>
+        <div class="logo">
+            <a href="#">
+                <img src="../imgs/logo.png" alt="">
+            </a>
+        </div>
+
+        <nav class="menu-1">
+            <ul>
+                <li>
+                    <a href="#">회사소개</a>
+                    <ul>
+                        <li><a href="#">기업소개</a></li>
+                        <li><a href="#">비전</a></li>
+                        <li><a href="#">홍보영상</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">사업소개</a>
+                    <ul>
+                        <li><a href="#">사업영역</a></li>
+                        <li><a href="#">생산시설</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">제품소개</a>
+                </li>
+
+                <li>
+                    <a href="#">고객센터</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">문의하기</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">쇼핑몰</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <style>
+        /* 라이브러리 */
+        body, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* 커스텀 */
+        body {
+            background-color: gray;
+        }
+
+        /* .top-bar {
+            background-color: deepskyblue;
+        } */
+
+        .top-bar {
+            position: relative;
+            max-width: 1700px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .top-bar > .menu-1 {
+            width: 730px;
+            height: 100%;
+            /* border: 1px solid red; */
+            margin-left: auto;
+        }
+
+        .top-bar > .menu-1 > ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar > .menu-1 > ul > li {
+            position: relative;
+            width: 25%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .top-bar > .menu-1 > ul > li > a {
+            display: inline-block;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .top-bar > .menu-1 > ul > li > ul {
+            display: none;
+            position: absolute;
+            color: #fff;
+            top: 125px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .top-bar > .menu-1 > ul > li > ul > li > a {
+            display: block;
+            padding: 10px 0;
+        }
+
+        .top-bar:hover .menu-1 > ul > li > ul {
+            display: block;
+        }
+
+        /* 배경 설정 */
+        .top-bar > .menu-bg {
+            position: fixed;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+            transition: height .3s ease;
+        }
+
+        .top-bar:hover .menu-bg {
+            height: 315px;
+        }
+    </style>
+
+</body>
+</html>

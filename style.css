@@ -1,0 +1,43 @@
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 시작 */
+.header {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    box-sizing: content-box;
+    border: 1px solid red;
+}
+
+.header > .header-box {
+    position: relative;
+    height: 100%;
+}
+
+.header-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all .3s;
+    z-index: -1;
+}
+
+.header > .header-box > .inner01 {
+    display: flex;
+    
+}
