@@ -10,51 +10,53 @@
 </head>
 
 <body>
-    <div class="top-bar">
-        <div class="menu-bg"></div>
-        <div class="logo">
-            <a href="#">
-                <img src="../imgs/logo.png" alt="">
-            </a>
+    <div class="top-bar-wrapper">
+        <div class="top-bar">
+            <div class="menu-bg"></div>
+            <div class="logo">
+                <a href="#">
+                    <img src="../imgs/logo.png" alt="">
+                </a>
+            </div>
+
+            <nav class="menu-1">
+                <ul>
+                    <li>
+                        <a href="#">회사소개</a>
+                        <ul>
+                            <li><a href="#">기업소개</a></li>
+                            <li><a href="#">비전</a></li>
+                            <li><a href="#">홍보영상</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">사업소개</a>
+                        <ul>
+                            <li><a href="#">사업영역</a></li>
+                            <li><a href="#">생산시설</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">제품소개</a>
+                    </li>
+
+                    <li>
+                        <a href="#">고객센터</a>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">문의하기</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">쇼핑몰</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-
-        <nav class="menu-1">
-            <ul>
-                <li>
-                    <a href="#">회사소개</a>
-                    <ul>
-                        <li><a href="#">기업소개</a></li>
-                        <li><a href="#">비전</a></li>
-                        <li><a href="#">홍보영상</a></li>
-                        <li><a href="#">오시는길</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#">사업소개</a>
-                    <ul>
-                        <li><a href="#">사업영역</a></li>
-                        <li><a href="#">생산시설</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#">제품소개</a>
-                </li>
-
-                <li>
-                    <a href="#">고객센터</a>
-                    <ul>
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">문의하기</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#">쇼핑몰</a>
-                </li>
-            </ul>
-        </nav>
     </div>
 
     <style>
@@ -78,6 +80,16 @@
         /* .top-bar {
             background-color: deepskyblue;
         } */
+
+        .top-bar-wrapper {
+            /* 색을 투명하게 설정하고 호버했을 때만 보이게 */
+            border-bottom: 1px solid transparent;
+            transition: border-color .3s ease;
+        }
+
+        .top-bar-wrapper:hover {
+            border-color: #fff;
+        }
 
         .top-bar {
             position: relative;
@@ -112,6 +124,24 @@
             text-align: center;
         }
 
+        .top-bar > .menu-1 > ul > li::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: #fff;
+            transition: width .3s ease;
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+
+        .top-bar > .menu-1 > ul > li:hover::after {
+            width: 100%;
+            opacity: 1;
+        }
+
         .top-bar > .menu-1 > ul > li > a {
             display: inline-block;
             font-size: 18px;
@@ -131,7 +161,7 @@
 
         .top-bar > .menu-1 > ul > li > ul > li > a {
             display: block;
-            padding: 10px 0;
+            padding-bottom: 20px;
         }
 
         .top-bar:hover .menu-1 > ul > li > ul {
