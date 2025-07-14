@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+</head>
+
+<body>
+    <section class="main">
+        <div class="main-bg"></div>
+
+        <div class="main-contents">
+            <div class="main-textbox">
+                <h1 class="main-title">
+                    다채로운 수산 먹거리
+                    <br>
+                    문화를 창조하는 (주)코람데오
+                </h1>
+
+                <p class="main-sub">
+                    철저한 상품 관리와 가공 노하우로 신선하고
+                    <br>
+                    맛있는 수산물 경험을 제공합니다.
+                </p>
+            </div>
+        </div>
+
+        <div class="main-btn">
+            <ul>
+                <li class="main-btn-item">
+                    <a href="#">
+                        <p>INTRODUCTION</p>
+                        <span>기업소개</span>
+                    </a>
+                </li>
+
+                <li class="main-btn-item">
+                    <a href="#">
+                        <p>Business field</p>
+                        <span>사업 분야</span>
+                    </a>
+                </li>
+
+                <li class="main-btn-item">
+                    <a href="#">
+                        <p>partner inquiry</p>
+                        <span>제휴 문의</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    </section>
+
+    <style>
+        .main {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .main-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../imgs/main-visual.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .main-contents {
+            max-width: 1500px;
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+
+        .main-textbox {
+            color: #fff;
+            text-align: left;
+        }
+
+        .main-contents > .main-textbox > h1 {
+            font-size: 52px;
+            line-height: 1.2;
+        }
+
+        .main-contents > .main-textbox > p {
+            padding-top: 30px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</body>
+</html>
